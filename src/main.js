@@ -29,8 +29,6 @@ searchForm.addEventListener('submit', event => {
 
   getImagesByQuery(query)
     .then(data => {
-      hideLoader();
-
       if (data.hits.length === 0) {
         iziToast.error({
           title: 'Error',
@@ -44,8 +42,7 @@ searchForm.addEventListener('submit', event => {
 
       searchForm.reset();
     })
-    .catch(error => {
-      hideLoader();
+    .catch(() => {
       iziToast.error({
         title: 'Error',
         message:
@@ -53,5 +50,8 @@ searchForm.addEventListener('submit', event => {
         position: 'topRight',
       });
       searchForm.reset();
+    })
+    .finally(() => {
+      hideLoader();
     });
 });
