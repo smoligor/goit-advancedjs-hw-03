@@ -3,19 +3,19 @@ body {
   padding: 20px;
 }
 
-.search-form {
+.form {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
   justify-content: center;
 }
 
-.search-form input {
+.form input {
   padding: 8px;
   width: 300px;
 }
 
-.search-form button {
+.form button {
   padding: 8px 16px;
   background-color: #007bff;
   color: white;
