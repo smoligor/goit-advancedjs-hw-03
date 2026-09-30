@@ -1,82 +1,57 @@
 body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  padding: 20px;
 }
 
 .search-form {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-    justify-content: center;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
 }
 
 .search-form input {
-    padding: 8px;
-    width: 300px;
+  padding: 8px;
+  width: 300px;
 }
 
 .search-form button {
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
-    list-style: none;
-    padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  list-style: none;
+  padding: 0;
 }
 
 .gallery__item {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .gallery__image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
 }
 
 .info {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 12px;
 }
 
 .info-item {
-    text-align: center;
+  text-align: center;
 }
 
-/* CSS Loader */
-.loader {
-    display: none;
-    margin: 40px auto;
-    width: 48px;
-    height: 48px;
-    border: 5px solid #007bff;
-    border-bottom-color: transparent;
-    border-radius: 50%;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
-}
-
-.loader.is-visible {
-    display: block;
-}
-
-@keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}

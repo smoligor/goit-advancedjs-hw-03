@@ -2,17 +2,25 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const gallery = document.querySelector('.gallery');
-const loader = document.querySelector('.loader');
+const loader = document.querySelector('.loader-1');
 
 const lightbox = new SimpleLightbox('.gallery a', {
-    captionsData: 'alt',
-    captionDelay: 250,
+  captionsData: 'alt',
+  captionDelay: 250,
 });
 
 export function createGallery(images) {
-    const markup = images
-        .map(
-            ({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) => `
+  const markup = images
+    .map(
+      ({
+        webformatURL,
+        largeImageURL,
+        tags,
+        likes,
+        views,
+        comments,
+        downloads,
+      }) => `
         <li class="gallery__item">
             <a class="gallery__link" href="${largeImageURL}">
                 <img class="gallery__image" src="${webformatURL}" alt="${tags}" loading="lazy" />
@@ -25,21 +33,21 @@ export function createGallery(images) {
             </div>
         </li>
     `
-        )
-        .join('');
+    )
+    .join('');
 
-    gallery.insertAdjacentHTML('beforeend', markup);
-    lightbox.refresh();
+  gallery.insertAdjacentHTML('beforeend', markup);
+  lightbox.refresh();
 }
 
 export function clearGallery() {
-    gallery.innerHTML = '';
+  gallery.innerHTML = '';
 }
 
 export function showLoader() {
-    loader.classList.add('is-visible');
+  loader.classList.add('is-visible');
 }
 
 export function hideLoader() {
-    loader.classList.remove('is-visible');
+  loader.classList.remove('is-visible');
 }
